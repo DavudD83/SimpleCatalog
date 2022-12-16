@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleCatalog</string>
+    <string name="fragment_catalog_title">Catalog</string>
+    <string name="id_title">id</string>
+    <string name="text_title">text</string>
+    <string name="confidence_title">confidence</string>
+    <string name="initial_error_message">Something went wrong. Please pull to refresh screen.</string>
+    <string name="retry_text">retry</string>
+    <string name="new_page_loading_error_message">Something went wrong. Please retry.</string>
+    <string name="catalog_item_details_title">Details</string>
+    <string name="empty_items_message">Catalog is empty for now, please wait and update screen later!</string>
+</resources>

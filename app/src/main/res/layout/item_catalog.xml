@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:padding="@dimen/medium">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/catalog_item_image_size"
+        android:layout_height="@dimen/catalog_item_image_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/purple_700" />
+
+    <TextView
+        android:id="@+id/idTitle"
+        style="@style/CatalogItemTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:text="@string/id_title"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="ID" />
+
+    <TextView
+        android:id="@+id/id"
+        style="@style/CatalogItemValueStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:maxLines="2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/textTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/idTitle"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="12345678920" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        style="@style/CatalogItemTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium"
+        android:text="@string/text_title"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/id"
+        app:layout_constraintTop_toBottomOf="@id/id"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="NAME" />
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/CatalogItemValueStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/confidenceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/id"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Simple name" />
+
+    <TextView
+        android:id="@+id/confidenceTitle"
+        style="@style/CatalogItemTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium"
+        android:text="@string/confidence_title"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/confidence"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/text"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="CONFIDENCE" />
+
+    <TextView
+        android:id="@+id/confidence"
+        style="@style/CatalogItemValueStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/confidenceTitle"
+        app:layout_constraintTop_toBottomOf="@id/confidenceTitle"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="0.04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
